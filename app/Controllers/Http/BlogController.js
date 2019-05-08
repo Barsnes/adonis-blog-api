@@ -6,7 +6,7 @@ class BlogController {
 
   async index ({ request, response }) {
     const blog = await Blog.all()
-    return response.status(201).json( { blog } )
+    return response.status(200).json( { blog } )
   }
 
   async create ({ request, response, view }) {
@@ -33,7 +33,7 @@ class BlogController {
     const blog = await Blog.findOrFail(request.params.id)
     blog.delete()
 
-    return response.status(201).json({ success: 'Blog deleted' })
+    return response.status(200).json({ success: 'Blog deleted' })
   }
 
 }

@@ -9,4 +9,4 @@ Route.get('/', () => {
 
 Route.post('/api/blogs', 'BlogController.store')
 Route.get('/api/blogs', 'BlogController.index')
-Route.delete('/api/blogs/:id/delete', 'BlogController.delete')
+Route.delete('/api/blogs/:id', 'BlogController.delete')
